@@ -1,4 +1,4 @@
-#to do list -vol. React
+# To do list -vol. React
 
 https://olgasowlet.github.io/To-do-list-React/
 
