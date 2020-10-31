@@ -23,18 +23,6 @@
     flex-wrap: wrap;
 }
 
-.section__button {
-    border: none;
-    background-color: white;
-    color: teal;
-    padding: 0 10px;
-    transition: 0.5s;
-}
-
-.section__button:hover {
-    opacity: 0.7;
-}
-
 @media (max-width: 466px) {
     .section__span {
         flex-direction: column;
@@ -42,9 +30,6 @@
     }
     .section__header {
         margin-bottom: 15px;
-    }
-    .section__button {
-        margin: 5px 0;
     }
 }
 
@@ -57,8 +42,4 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.section__button:disabled {
-    color: grey;
 }

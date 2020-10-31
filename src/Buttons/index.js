@@ -1,5 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 import "../Container/style.css";
+
+const Button = styled.button`
+    border: none;
+    background-color: white;
+    color: teal;
+    padding: 0 10px;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:disabled {
+        color: grey;
+    }
+
+    @media (max-width: 466px) {
+        margin: 5px 0;
+    }
+`;
 
 const Buttons = (props) => {
     if (props.tasks.length === 0) {
@@ -8,8 +29,8 @@ const Buttons = (props) => {
 
     return (
         <span className="section__span">
-            <button onClick={props.toggleHideDoneTask} className="section__button">{props.hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-            <button onClick={props.setAllDone} className="section__button" disabled={props.tasks.every(({ done }) => done)}>Ukończ wszystkie</button>
+            <Button onClick={props.toggleHideDoneTask} className="section__button">{props.hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</Button>
+            <Button onClick={props.setAllDone} className="section__button" disabled={props.tasks.every(({ done }) => done)}>Ukończ wszystkie</Button>
         </span>
     )
 }
