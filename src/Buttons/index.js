@@ -1,6 +1,5 @@
 import React from "react";
 import { Span, Button } from "./style.js";
-import "../Container/style.css";
 
 const Buttons = (props) => {
     if (props.tasks.length === 0) {
