@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, StyledHeader } from "./styles.js";
+import { Title, StyledHeader } from "./style.js";
 
 const Header = ({title}) => (
     <StyledHeader className="header">
