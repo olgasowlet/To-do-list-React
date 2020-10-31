@@ -1,10 +1,11 @@
 import React from "react";
-import "./style.css";
+import { Div } from "./style.js";
+
 
 const Container = (props) => (
-    <div className="container">
+    <Div>
         {props.children}
-    </div>
+    </Div>
 );
 
 export default Container;
