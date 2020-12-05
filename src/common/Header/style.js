@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "../fonts.css";
+import "../../fonts.css";
 
 const Title = styled.h1`
     font-size: 2.5em;
