@@ -1,7 +1,7 @@
 import React from "react";
 import { Ul, Li, Button, Span, Icon } from "./style.js";
 
-const Tasks = (props) => (
+const TasksList = (props) => (
     <Ul>
         {props.tasks.map(task => (
             <Li display={`${task.done && props.hideDoneTasks ? "none" : ""}`} key={task.id} >
@@ -19,4 +19,4 @@ const Tasks = (props) => (
     </Ul>
 );
 
-export default Tasks;
+export default TasksList;

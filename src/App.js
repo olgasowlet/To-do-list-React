@@ -1,6 +1,6 @@
 import React from "react";
-import TasksList from "./features/tasks/TasksList";
+import Tasks from "./features/tasks/Tasks";
 
 export default function App() {
-    return <TasksList />
+    return <Tasks />
 }; 
