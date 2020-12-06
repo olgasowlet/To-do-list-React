@@ -9,8 +9,8 @@ const Buttons = (props) => {
     return (
         <Span>
             <Button onClick={props.toggleHideDoneTask}>{props.hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</Button>
-            <Button onClick={props.setAllDone} disabled={props.tasks.every( done  => done)}>Ukończ wszystkie</Button>
-        </Span>
+            <Button onClick={props.setAllDone} disabled={props.tasks.every(({ done })  => done)}>Ukończ wszystkie</Button>
+        </Span >
     )
 }
 
