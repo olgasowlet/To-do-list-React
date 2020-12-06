@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from "react-redux";
+import { selectTasks } from "./tasksSlice";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Section from '../../common/Section';
@@ -15,8 +17,9 @@ function Tasks() {
     setHideDoneTask(hideDoneTasks => !hideDoneTasks);
   };
 
+  const { tasks } = useSelector(selectTasks);
+
   const {
-    tasks,
     removeTask,
     toggleTaskDone,
     setAllDone,
