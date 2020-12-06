@@ -19,11 +19,11 @@ function Tasks() {
 
   const { tasks } = useSelector(selectTasks);
 
+
   const {
     removeTask,
     toggleTaskDone,
     setAllDone,
-    addNewTask,
   } = useTasks();
 
   return (
@@ -34,7 +34,7 @@ function Tasks() {
       <Container>
         <Section
           title="Dodaj nowe zadanie"
-          body={<Form addNewTask={addNewTask} />}
+          body={<Form />}
         />
         <Section
           title="Lista zadań"
