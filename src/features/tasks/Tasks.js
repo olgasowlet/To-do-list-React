@@ -11,8 +11,6 @@ import TasksList from './TasksList';
 function Tasks() {
 
   const {
-    removeTask,
-    toggleTaskDone,
     setAllDone,
   } = useTasks();
 
@@ -29,7 +27,7 @@ function Tasks() {
         <Section
           title="Lista zadań"
           extrasToHeader={<Buttons setAllDone={setAllDone} />}
-          body={<TasksList removeTask={removeTask} toggleTaskDone={toggleTaskDone} />}
+          body={<TasksList />}
         />
       </Container>
     </MainContainer>
