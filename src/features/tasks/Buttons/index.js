@@ -16,7 +16,7 @@ const Buttons = (props) => {
     return (
         <Span>
             <Button onClick={() => dispatch(toggleHideDone())}>{hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}</Button>
-            <Button onClick={props.setAllDone} disabled={props.tasks.every(({ done }) => done)}>Ukończ wszystkie</Button>
+            <Button onClick={props.setAllDone} disabled={tasks.every(({ done }) => done)}>Ukończ wszystkie</Button>
         </Span >
     )
 }
