@@ -5,14 +5,14 @@ import Section from '../../common/Section';
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 import MainContainer from "../../common/MainContainer";
-// import { useTasks } from "../../useTasks";
+import store from "../../store";
+import selectTasks from "./tasksSlice";
 import TasksList from './TasksList';
 
 function Tasks() {
-  
-
-  // const {
-  // } = useTasks();
+  store.subscribe(() => {
+    localStorage.setItem(selectTasks, JSON.stringify(store.getState()))
+  })
 
   return (
     <MainContainer>
@@ -26,7 +26,7 @@ function Tasks() {
         />
         <Section
           title="Lista zadań"
-          extrasToHeader={<Buttons/>}
+          extrasToHeader={<Buttons />}
           body={<TasksList />}
         />
       </Container>
