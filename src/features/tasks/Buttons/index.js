@@ -1,6 +1,6 @@
 import React from "react";
 import { Span, Button } from "./style.js";
-import { selectTasks, toggleHideDone } from "../tasksSlice";
+import { selectTasks, toggleHideDone, setAllDone } from "../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -16,7 +16,7 @@ const Buttons = (props) => {
     return (
         <Span>
             <Button onClick={() => dispatch(toggleHideDone())}>{hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}</Button>
-            <Button onClick={props.setAllDone} disabled={tasks.every(({ done }) => done)}>Ukończ wszystkie</Button>
+            <Button onClick={() => dispatch(setAllDone())} disabled={tasks.every(({ done }) => done)}>Ukończ wszystkie</Button>
         </Span >
     )
 }
