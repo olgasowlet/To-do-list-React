@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import tasksSaga from "./features/tasks/tasksSaga";
+import rootSaga from "./rootSaga";
 import tasksReducer, { selectTasks } from "./features/tasks/tasksSlice";
 
 const persistedState = localStorage.getItem(selectTasks)
@@ -18,6 +18,6 @@ const store = configureStore({
     persistedState,
 })
 
-sagaMiddleWare.run(tasksSaga);
+sagaMiddleWare.run(rootSaga);
 
 export default store;
