@@ -8,11 +8,16 @@ import MainContainer from "../../common/MainContainer";
 import store from "../../store";
 import selectTasks from "./tasksSlice";
 import TasksList from './TasksList';
+import { Button } from "./Buttons/style";
+import { useDispatch } from "react-redux";
+import { fetchExampleTasks } from "./tasksSlice";
 
 function Tasks() {
   store.subscribe(() => {
     localStorage.setItem(selectTasks, JSON.stringify(store.getState()))
   })
+
+  const dispatch = useDispatch();
 
   return (
     <MainContainer>
@@ -22,6 +27,7 @@ function Tasks() {
       <Container>
         <Section
           title="Dodaj nowe zadanie"
+          extrasToHeader={<Button onClick={() => dispatch(fetchExampleTasks())}>Pobierz przykładowe zadania</Button>}
           body={<Form />}
         />
         <Section
