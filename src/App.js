@@ -3,16 +3,17 @@ import { HashRouter, Switch, Route, NavLink, Redirect } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author";
 import Task from "./features/tasks/TaskPage/index";
+import { StyledNavLink, Nav, Ul, Li } from "./style";
 
 export default function App() {
     return (
         <HashRouter>
-            <nav>
-                <ul>
-                    <li><NavLink activeClassName="active" to="/zadania">Zadania</NavLink></li>
-                    <li><NavLink activeClassName="active" to="/author">O autorze</NavLink></li>
-                </ul>
-            </nav>
+            <Nav>
+                <Ul>
+                    <Li><StyledNavLink to="/zadania">Zadania</StyledNavLink></Li>
+                    <Li><StyledNavLink to="/author">O autorze</StyledNavLink></Li>
+                </Ul>
+            </Nav>
 
             <Switch>
                 <Route path="/author">

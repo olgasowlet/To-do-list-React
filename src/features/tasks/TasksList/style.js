@@ -1,4 +1,14 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
+
+const activeClassName = "active";
+
+const StyledNavLink = styled(NavLink).attrs(() => ({
+    activeClassName,
+}))`
+    text-decoration: none;
+    color: black;
+`;
 
 
 const Ul = styled.ul`
@@ -63,4 +73,4 @@ const Icon = styled.div`
     `}
 `;
 
-export { Ul, Li, Button, Span, Icon };
+export { Ul, Li, Button, Span, Icon, StyledNavLink };

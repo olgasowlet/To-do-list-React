@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { StyledNavLink } from "./style";
 import { toggleTaskDone, removeTask, selectTasksByQuery, selectHideDone } from "../tasksSlice.js";
 import { Ul, Li, Button, Span, Icon } from "./style.js";
 
@@ -23,7 +24,7 @@ const TasksList = () => {
                         <Icon done={task.done} className="fas fa-check "></Icon>
                     </Button>
                     <Span done={task.done}>
-                        <Link to={`/zadania/${task.id}`}>{task.content}</Link>
+                        <StyledNavLink to={`/zadania/${task.id}`}>{task.content}</StyledNavLink>
                     </Span>
                     <Button toDelete onClick={() => dispatch(removeTask(task.id))}>
                         <Icon done className="far fa-trash-alt"></Icon>
