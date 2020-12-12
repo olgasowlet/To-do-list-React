@@ -4,7 +4,7 @@ import { selectTasks, toggleHideDone, setAllDone } from "../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 
-const Buttons = (props) => {
+const Buttons = () => {
     const dispatch = useDispatch();
 
     const { tasks, hideDone } = useSelector(selectTasks);
