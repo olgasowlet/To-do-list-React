@@ -12,6 +12,7 @@ function Task() {
     const { id } = useParams();
     const task = useSelector(state => selectTaskById(state, id));
 
+    console.log(task);
     return (
         <MainContainer>
             <Header
