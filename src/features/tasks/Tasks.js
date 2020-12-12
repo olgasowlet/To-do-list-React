@@ -11,9 +11,6 @@ import { useDispatch } from "react-redux";
 import { fetchExampleTasks } from "./tasksSlice";
 
 function Tasks() {
-  // store.subscribe(() => {
-  //   localStorage.setItem(selectTasks, JSON.stringify(store.getState()))
-  // })
 
   const dispatch = useDispatch();
 
