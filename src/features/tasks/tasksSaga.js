@@ -21,7 +21,7 @@ function* addTasksToLocalStorageHandler() {
     };
 };
 
-export default function* watchFetchExampleTasks() {
+export default function* tasksSaga() {
     yield throttle(10_000, fetchExampleTasks.type, fetchExampleTasksHandler);
     yield takeEvery("*", addTasksToLocalStorageHandler);
 };
