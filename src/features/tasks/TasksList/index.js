@@ -18,7 +18,7 @@ const TasksList = () => {
 
     return (
         <Ul>
-            {tasks.map(task => (
+            {tasks.tasks.map(task => (
                 <Li display={`${task.done && hideDone ? "none" : ""}`} key={task.id} >
                     <Button done onClick={() => dispatch(toggleTaskDone(task.id))}>
                         <Icon done={task.done} className="fas fa-check "></Icon>
