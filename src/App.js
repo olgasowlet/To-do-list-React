@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author";
 import Task from "./features/tasks/TaskPage/index";

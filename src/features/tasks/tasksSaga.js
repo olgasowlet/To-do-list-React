@@ -15,7 +15,7 @@ function* fetchExampleTasksHandler() {
 function* addTasksToLocalStorageHandler() {
     try {
         const tasks = yield select(selectTasks);
-        yield call(saveTasksInLocalStorage, tasks.tasks);
+        yield call(saveTasksInLocalStorage, tasks);
     } catch (error) {
         yield call(alert, "Popsute :/");
     };
