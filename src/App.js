@@ -25,7 +25,7 @@ export default function App() {
                 <Route path="/zadania">
                     <Tasks />
                 </Route>
-                <Route>
+                <Route path="/">
                     <Redirect to="/zadania" />
                 </Route>
             </Switch>
