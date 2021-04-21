@@ -16,7 +16,8 @@ function Author() {
                     title="Olga Sowińska"
                     body={
                         <>
-                            <p>Miło, że tu jesteś! Jeśli jesteś rekruterem to nie wahaj się i śmiało się ze mną skontaktuj! 😁 Będzie mi wtedy jeszcze milej 😏</p>
+                            <p>Studentka, członkini Koła Naukowego Rozwoju Osobistego, miłośniczka jeździectwa i właścicielka Tesli 🐕</p>
+                            <img width="300px" src="https://i.ibb.co/vj4Q16G/IMG-0416.jpg" alt="Piesek Tesla"></img>
                         </>
                     }
                 />
